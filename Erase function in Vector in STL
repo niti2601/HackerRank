@@ -1,0 +1,32 @@
+int main(){
+vector<int> v1;
+    int n,a;
+    
+    cin>>n;  //Enter size of vector
+    
+    for(int i=0;i<n;i++)
+    {
+        cin>>a;
+        v1.push_back(a); //entering elements in vector
+    }
+    
+    int n1;
+    cin>>n1;            //enter position to erase
+    v1.erase(v1.begin()+n1-1);
+    
+    int n2,n3;
+    cin>>n2>>n3;        //enter range of position to erase
+    
+    v1.erase(v1.begin()+n2-1,v1.begin()+n3-1);
+    
+    cout<<v1.size();
+    
+    cout<<endl;
+    
+    vector<int>:: iterator it;  
+    
+    for(it=v1.begin();it!=v1.end();it++)
+       cout<<*it<<" ";
+       
+    return 0;
+    }
